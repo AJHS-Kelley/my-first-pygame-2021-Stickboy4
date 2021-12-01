@@ -1,4 +1,4 @@
-# My First PyGame, Donte Gardner, 11/29/21 1:59, v0,5 
+# My First PyGame, Donte Gardner, 12/1/21 1:55, v0,6 
 
 import pygame, sys
 from pygame.locals import *
@@ -16,6 +16,7 @@ WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
+BURNINGRED = (252, 3, 53)
 
 # Setup font.
 basicFont = pygame.font.SysFont(None, 48)
@@ -27,7 +28,12 @@ textRect.centerx = windowsurface.get_rect().centerx
 textRect,centery + windowSurface.get_rect().centery
 
 # Fill background color.
-windowSurface.fill(WHITE)
+windowSurface.fill(BURNINGRED)
 
 # Draw a polygon onto the screen.
-pygame.draw.polygon(windowSurface, GREEN,((146, 0), (291, 106), (236, 277), (56, 277), (0, 106)))
+pygame.draw.polygon(windowSurface, GREEN, ((146, 0), (291, 106), (236, 277), (56, 277), (0, 106)))
+
+#Draw lines on the screen.
+pygame.draw.line(windowSurface,BLUE, (0,150), (150, 0), 1)
+pygame.draw.line(windowSurface,RED, (60,60), (120, 60), 4)
+pygame.draw.line(windowSurface,WHITE, (75, 60), (60, 75), 2)
