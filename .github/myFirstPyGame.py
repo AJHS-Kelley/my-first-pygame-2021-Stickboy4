@@ -1,4 +1,4 @@
-# My First PyGame, Donte Gardner, 12/1/21 2:06, v0,7 
+# My First PyGame, Donte Gardner, 12/1/21 2:06, v0,8
 
 import pygame, sys
 from pygame.locals import *
@@ -51,3 +51,6 @@ pygame.draw.rect(windowsurface, RED, (textRect.left - 20, textRect.width + 40, t
 pixArray = pygame.pixelArray(windowsurface)
 pixArray[480][380] = BLUE
 del pixArray
+
+# Draw the text onto the surface
+windowSurface.blit(text, textRect)
