@@ -1,4 +1,4 @@
-# My First PyGame, Donte Gardner, 12/1/21 2:06, v0,9
+# My First PyGame, Donte Gardner, 12/1/21 2:06, v2,0
 
 import pygame, sys
 from pygame import display
@@ -46,7 +46,7 @@ pygame.draw.circle(windowSurface, BLACK, (300, 50), 20, 0)
 pygame.draw.ellipse(windowSurface, RED, (300, 250, 40, 80),1)
 
 #Draw the text rectangle
-pygame.draw.rect(windowSurface, RED, (textRect.left - 20, textRect.top -20, textRect.width + 40, textRect.height + 40,)
+pygame.draw.rect(windowSurface, RED, (textRect.left - 20, textRect.top -20, textRect.width + 40, textRect.height + 40))
 
 # Create Pixel Array
 pixArray = pygame.PixelArray(windowSurface)
@@ -57,7 +57,7 @@ del pixArray
 windowSurface.blit(text, textRect)
 
 #Update Pygame Display
-pygame,display.upadte()
+pygame,display.update()
 # Run game loop.
 while True:
     for event in pygame.event.get():    
