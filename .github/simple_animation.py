@@ -10,7 +10,7 @@ pygame.init()
 WINDOWWIDTH = 400
 WINDOWHEIGHT = 400
 windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
-pygame.display.set_capton('Animation Example!')
+pygame.display.set_caption('Animation Example!')
 
 # Setup the direction variables.
 DOWNLEFT = 'downleft'
@@ -53,7 +53,7 @@ while True:
         if b['dir'] == UPLEFT:
             b['rect'].left -= MOVESPEED
             b['rect'].top -= MOVESPEED
-        if b['dir'] == UPRIGHT
+        if b['dir'] == UPRIGHT:
             b['rect'].left += MOVESPEED
             b['rect'].top  -= MOVESPEED
 
@@ -66,7 +66,7 @@ while True:
             if b['rect'].bottom > WINDOWHEIGHT:
                 # The box has moved past the bottom 
                 if b['dir'] == DOWNLEFT:
-                    b['dir'] = DOWNRIGHt
+                    b['dir'] = DOWNRIGHT
                 if b['dir'] == UPRIGHT:
                     b['dir'] = UPLEFT
 
