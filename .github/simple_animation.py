@@ -63,11 +63,11 @@ while True:
                 b['dir'] == DOWNLEFT
             if b['dir'] ==  UPRIGHT:
                 b['dir'] == DOWNRIGHT
-            if b['rect'].bottom > WINDOWHEIGHT:
+        if b['rect'].bottom > WINDOWHEIGHT:
                 # The box has moved past the bottom 
-                if b['dir'] == DOWNLEFT:
-                    b['dir'] = DOWNRIGHT
-                if b['dir'] == UPRIGHT:
+            if b['dir'] == DOWNLEFT:
+                b['dir'] = DOWNRIGHT
+            if b['dir'] == UPRIGHT:
                     b['dir'] = UPLEFT
             if b['rect'].left < 0:
                 # The box has moved past the left
@@ -86,5 +86,5 @@ while True:
         pygame.draw.rect(windowSurface, b['color'], b['rect'])
 
    # Draw the window to the screen.
-   pygame.display.upadate()
-   time.sleep(0.02)
+    pygame.display.update()
+    time.sleep(0.02)
