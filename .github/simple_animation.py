@@ -66,9 +66,9 @@ while True:
         if b['rect'].bottom > WINDOWHEIGHT: 
                 # The box has moved past the bottom 
             if b['dir'] == DOWNLEFT: # Align vertically with 62. 
-                b['dir'] = DOWNRIGHT # Align vertically with 63. 
+                b['dir'] = DOWNRIGHT # UPLEFT
             if b['dir'] == UPRIGHT: # Align vertically with 62. 
-                b['dir'] = UPLEFT # Align vertically with 63. 
+                b['dir'] = UPLEFT # UPRIGHT 
         if b['rect'].left < 0: # Align vertically with 60. 
                 # The box has moved past the left 
             if b['dir'] == DOWNLEFT: # Align vertically with 62. 
