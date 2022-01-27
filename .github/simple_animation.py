@@ -55,32 +55,32 @@ while True:
             b['rect'].top -= MOVESPEED
         if b['dir'] == UPRIGHT:
             b['rect'].left += MOVESPEED
-            b['rect'].top  -= MOVESPEED
+            b['rect'].top -= MOVESPEED
 
         if b['rect'].top < 0:
             # The box has moved past the top.
             if b['dir'] == UPLEFT: 
-                b['dir'] == DOWNLEFT 
-        if b['dir'] ==  UPRIGHT: # Align vertically with 62. 
-            b['dir'] == DOWNRIGHT # Align vertically with 63. 
+                b['dir'] = DOWNLEFT 
+            if b['dir'] ==  UPRIGHT: # Align vertically with 62. 
+                b['dir'] = DOWNRIGHT # Align vertically with 63. 
         if b['rect'].bottom > WINDOWHEIGHT: 
                 # The box has moved past the bottom 
             if b['dir'] == DOWNLEFT: # Align vertically with 62. 
                 b['dir'] = DOWNRIGHT # Align vertically with 63. 
             if b['dir'] == UPRIGHT: # Align vertically with 62. 
-                    b['dir'] = UPLEFT # Align vertically with 63. 
-            if b['rect'].left < 0: # Align vertically with 60. 
+                b['dir'] = UPLEFT # Align vertically with 63. 
+        if b['rect'].left < 0: # Align vertically with 60. 
                 # The box has moved past the left 
-                if b['dir'] == DOWNLEFT: # Align vertically with 62. 
-                    b['dir'] = DOWNRIGHT # Align vertically with 63. 
-                if b['dir'] == UPLEFT: # Align vertically with 62. 
-                    b['dir'] = UPRIGHT # Align vertically with 63. 
-            if b['rect'].right > WINDOWWIDTH: # Align vertically with 60. 
+            if b['dir'] == DOWNLEFT: # Align vertically with 62. 
+                b['dir'] = DOWNRIGHT # Align vertically with 63. 
+            if b['dir'] == UPLEFT: # Align vertically with 62. 
+                b['dir'] = UPRIGHT # Align vertically with 63. 
+        if b['rect'].right > WINDOWWIDTH: # Align vertically with 60. 
                 # THe box has moved past the right
-                if b['dir'] == DOWNRIGHT: # Align vertically with 62. 
-                    b['dir'] = DOWNLEFT # Align vertically with 63. 
-                if b['dir'] == UPRIGHT: # Align vertically with 62. 
-                    b['dir'] = UPLEFT # Align vertically with 63. 
+            if b['dir'] == DOWNRIGHT: # Align vertically with 62. 
+                b['dir'] = DOWNLEFT # Align vertically with 63. 
+            if b['dir'] == UPRIGHT: # Align vertically with 62. 
+                b['dir'] = UPLEFT # Align vertically with 63. 
 
         # Draw rhe box onto the game surface.                       
         pygame.draw.rect(windowSurface, b['color'], b['rect'])
